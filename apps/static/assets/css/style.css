@@ -141,6 +141,10 @@ strong {
   background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
 }
 
+/* live score blinking status */
+.Blink { animation: blinker 0.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; }
+@keyframes blinker { from { opacity: 1; } to { opacity: 0; } }
+
 /* ==========  card css start  =========== */
 .anim-rotate {
   -webkit-animation: anim-rotate 1s linear infinite;

@@ -1,748 +1,1440 @@
-{% extends "layouts/base.html" %}
-
-{% block title %} Dashboard {% endblock %} 
+{% extends "layouts/base.html" %} {% block title %} Dashboard {% endblock %}
 
 <!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
 
-{% block content %}
+        <!-- [ breadcrumb ] end -->
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              
 
-    <!-- [ Main Content ] start -->
-    <div class="pcoded-main-container">
-        <div class="pcoded-wrapper">
-
-            <div class="pcoded-content">
-                <div class="pcoded-inner-content">
-                    <!-- [ breadcrumb ] start -->
-
-                    <!-- [ breadcrumb ] end -->
-                    <div class="main-body">
-                        <div class="page-wrapper">
-                            <!-- [ Main Content ] start -->
-                            <div class="row">
-                                <!--[ daily sales section ] start-->
-                                <div class="col-md-6 col-xl-4">
-                                    <div class="card daily-sales">
-                                        <div class="card-block">
-                                            <h6 class="mb-4">Daily Sales</h6>
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-9">
-                                                    <h3 class="f-w-300 d-flex align-items-center m-b-0"><i
-                                                            class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>$
-                                                        249.95</h3>
-                                                </div>
-
-                                                <div class="col-3 text-right">
-                                                    <p class="m-b-0">67%</p>
-                                                </div>
-                                            </div>
-                                            <div class="progress m-t-30" style="height: 7px;">
-                                                <div class="progress-bar progress-c-theme" role="progressbar"
-                                                        style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--[ daily sales section ] end-->
-                                <!--[ Monthly  sales section ] starts-->
-                                <div class="col-md-6 col-xl-4">
-                                    <div class="card Monthly-sales">
-                                        <div class="card-block">
-                                            <h6 class="mb-4">Monthly Sales</h6>
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-9">
-                                                    <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i
-                                                            class="feather icon-arrow-down text-c-red f-30 m-r-10"></i>$
-                                                        2.942.32</h3>
-                                                </div>
-                                                <div class="col-3 text-right">
-                                                    <p class="m-b-0">36%</p>
-                                                </div>
-                                            </div>
-                                            <div class="progress m-t-30" style="height: 7px;">
-                                                <div class="progress-bar progress-c-theme2" role="progressbar"
-                                                        style="width: 35%;" aria-valuenow="35" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--[ Monthly  sales section ] end-->
-                                <!--[ year  sales section ] starts-->
-                                <div class="col-md-12 col-xl-4">
-                                    <div class="card yearly-sales">
-                                        <div class="card-block">
-                                            <h6 class="mb-4">Yearly Sales</h6>
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-9">
-                                                    <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i
-                                                            class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>$
-                                                        8.638.32</h3>
-                                                </div>
-                                                <div class="col-3 text-right">
-                                                    <p class="m-b-0">80%</p>
-                                                </div>
-                                            </div>
-                                            <div class="progress m-t-30" style="height: 7px;">
-                                                <div class="progress-bar progress-c-theme" role="progressbar"
-                                                        style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--[ year  sales section ] end-->
-                                <!--[ Recent Users ] start-->
-                                <div class="col-xl-8 col-md-6">
-                                    <div class="card Recent-Users">
-                                        <div class="card-header">
-                                            <h5>Recent Users</h5>
-                                        </div>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <tbody>
-                                                    <tr class="unread">
-                                                        <td><img class="rounded-circle" style="width:40px;"
-                                                                    src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg" alt="activity-user">
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="mb-1">Isabella Christensen</h6>
-                                                            <p class="m-0">Lorem Ipsum is simply…</p>
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="text-muted"><i
-                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>11
-                                                                MAY 12:56</h6>
-                                                        </td>
-                                                        <td><a href="#!"
-                                                                class="label theme-bg2 text-white f-12">Reject</a><a
-                                                                href="#!" class="label theme-bg text-white f-12">Approve</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="unread">
-                                                        <td><img class="rounded-circle" style="width:40px;"
-                                                                    src="{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg" alt="activity-user">
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="mb-1">Mathilde Andersen</h6>
-                                                            <p class="m-0">Lorem Ipsum is simply text of…</p>
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="text-muted"><i
-                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>11 MAY
-                                                                10:35</h6>
-                                                        </td>
-                                                        <td><a href="#!"
-                                                                class="label theme-bg2 text-white f-12">Reject</a><a
-                                                                href="#!" class="label theme-bg text-white f-12">Approve</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="unread">
-                                                        <td><img class="rounded-circle" style="width:40px;"
-                                                                    src="{{ config.ASSETS_ROOT }}/images/user/avatar-3.jpg" alt="activity-user">
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="mb-1">Karla Sorensen</h6>
-                                                            <p class="m-0">Lorem Ipsum is simply…</p>
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="text-muted"><i
-                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>9 MAY
-                                                                17:38</h6>
-                                                        </td>
-                                                        <td><a href="#!"
-                                                                class="label theme-bg2 text-white f-12">Reject</a><a
-                                                                href="#!" class="label theme-bg text-white f-12">Approve</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="unread">
-                                                        <td><img class="rounded-circle" style="width:40px;"
-                                                                    src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg" alt="activity-user">
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="mb-1">Ida Jorgensen</h6>
-                                                            <p class="m-0">Lorem Ipsum is simply text of…</p>
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="text-muted f-w-300"><i
-                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>19 MAY
-                                                                12:56</h6>
-                                                        </td>
-                                                        <td><a href="#!"
-                                                                class="label theme-bg2 text-white f-12">Reject</a><a
-                                                                href="#!" class="label theme-bg text-white f-12">Approve</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="unread">
-                                                        <td><img class="rounded-circle" style="width:40px;"
-                                                                    src="{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg" alt="activity-user">
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="mb-1">Albert Andersen</h6>
-                                                            <p class="m-0">Lorem Ipsum is simply dummy…</p>
-                                                        </td>
-                                                        <td>
-                                                            <h6 class="text-muted"><i
-                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>21
-                                                                July 12:56</h6>
-                                                        </td>
-                                                        <td><a href="#!"
-                                                                class="label theme-bg2 text-white f-12">Reject</a><a
-                                                                href="#!" class="label theme-bg text-white f-12">Approve</a>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--[ Recent Users ] end-->
-
-                                <!-- [ statistics year chart ] start -->
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="card card-event">
-                                        <div class="card-block">
-                                            <div class="row align-items-center justify-content-center">
-                                                <div class="col">
-                                                    <h5 class="m-0">Upcoming Event</h5>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <label class="label theme-bg2 text-white f-14 f-w-400 float-right">34%</label>
-                                                </div>
-                                            </div>
-                                            <h2 class="mt-3 f-w-300">45<sub class="text-muted f-14">Competitors</sub></h2>
-                                            <h6 class="text-muted mt-4 mb-0">You can participate in event </h6>
-                                            <i class="fab fa-angellist text-c-purple f-50"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-block border-bottom">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-auto">
-                                                    <i class="feather icon-zap f-30 text-c-green"></i>
-                                                </div>
-                                                <div class="col">
-                                                    <h3 class="f-w-300">235</h3>
-                                                    <span class="d-block text-uppercase">TOTAL IDEAS</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-block">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-auto">
-                                                    <i class="feather icon-map-pin f-30 text-c-blue"></i>
-                                                </div>
-                                                <div class="col">
-                                                    <h3 class="f-w-300">26</h3>
-                                                    <span class="d-block text-uppercase">TOTAL LOCATIONS</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- [ statistics year chart ] end -->
-                                <!--[social-media section] start-->
-                                <div class="col-md-12 col-xl-4">
-                                    <div class="card card-social">
-                                        <div class="card-block border-bottom">
-                                            <div class="row align-items-center justify-content-center">
-                                                <div class="col-auto">
-                                                    <i class="fab fa-facebook-f text-primary f-36"></i>
-                                                </div>
-                                                <div class="col text-right">
-                                                    <h3>12,281</h3>
-                                                    <h5 class="text-c-green mb-0">+7.2% <span
-                                                            class="text-muted">Total Likes</span></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-block">
-                                            <div class="row align-items-center justify-content-center card-active">
-                                                <div class="col-6">
-                                                    <h6 class="text-center m-b-10"><span
-                                                            class="text-muted m-r-5">Target:</span>35,098</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-c-theme" role="progressbar"
-                                                                style="width:60%;height:6px;" aria-valuenow="60"
-                                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <h6 class="text-center  m-b-10"><span
-                                                            class="text-muted m-r-5">Duration:</span>3,539</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-c-theme2" role="progressbar"
-                                                                style="width:45%;height:6px;" aria-valuenow="45"
-                                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <div class="card card-social">
-                                        <div class="card-block border-bottom">
-                                            <div class="row align-items-center justify-content-center">
-                                                <div class="col-auto">
-                                                    <i class="fab fa-twitter text-c-blue f-36"></i>
-                                                </div>
-                                                <div class="col text-right">
-                                                    <h3>11,200</h3>
-                                                    <h5 class="text-c-purple mb-0">+6.2% <span class="text-muted">Total Likes</span>
-                                                    </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-block">
-                                            <div class="row align-items-center justify-content-center card-active">
-                                                <div class="col-6">
-                                                    <h6 class="text-center m-b-10"><span
-                                                            class="text-muted m-r-5">Target:</span>34,185</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-c-green" role="progressbar"
-                                                                style="width:40%;height:6px;" aria-valuenow="40"
-                                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <h6 class="text-center  m-b-10"><span
-                                                            class="text-muted m-r-5">Duration:</span>4,567</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-c-blue" role="progressbar"
-                                                                style="width:70%;height:6px;" aria-valuenow="70"
-                                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <div class="card card-social">
-                                        <div class="card-block border-bottom">
-                                            <div class="row align-items-center justify-content-center">
-                                                <div class="col-auto">
-                                                    <i class="fab fa-google-plus-g text-c-red f-36"></i>
-                                                </div>
-                                                <div class="col text-right">
-                                                    <h3>10,500</h3>
-                                                    <h5 class="text-c-blue mb-0">+5.9% <span
-                                                            class="text-muted">Total Likes</span></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-block">
-                                            <div class="row align-items-center justify-content-center card-active">
-                                                <div class="col-6">
-                                                    <h6 class="text-center m-b-10"><span
-                                                            class="text-muted m-r-5">Target:</span>25,998</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-c-theme" role="progressbar"
-                                                                style="width:80%;height:6px;" aria-valuenow="80"
-                                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <h6 class="text-center  m-b-10"><span
-                                                            class="text-muted m-r-5">Duration:</span>7,753</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-c-theme2" role="progressbar"
-                                                                style="width:50%;height:6px;" aria-valuenow="50"
-                                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--[social-media section] end-->
-                                <!-- [ rating list ] starts-->
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="card user-list">
-                                        <div class="card-header">
-                                            <h5>Rating</h5>
-                                        </div>
-                                        <div class="card-block">
-                                            <div class="row align-items-center justify-content-center m-b-20">
-                                                <div class="col-6">
-                                                    <h2 class="f-w-300 d-flex align-items-center float-left m-0">4.7 <i
-                                                            class="fas fa-star f-10 m-l-10 text-c-yellow"></i></h2>
-                                                </div>
-                                                <div class="col-6">
-                                                    <h6 class="d-flex  align-items-center float-right m-0">0.4 <i
-                                                            class="fas fa-caret-up text-c-green f-22 m-l-10"></i></h6>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xl-12">
-                                                    <h6 class="align-items-center float-left"><i
-                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>5</h6>
-                                                    <h6 class="align-items-center float-right">384</h6>
-                                                    <div class="progress m-t-30 m-b-20" style="height: 6px;">
-                                                        <div class="progress-bar progress-c-theme" role="progressbar"
-                                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                                aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <h6 class="align-items-center float-left"><i
-                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>4</h6>
-                                                    <h6 class="align-items-center float-right">145</h6>
-                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
-                                                        <div class="progress-bar progress-c-theme" role="progressbar"
-                                                                style="width: 35%;" aria-valuenow="35" aria-valuemin="0"
-                                                                aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <h6 class="align-items-center float-left"><i
-                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>3</h6>
-                                                    <h6 class="align-items-center float-right">24</h6>
-                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
-                                                        <div class="progress-bar progress-c-theme" role="progressbar"
-                                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-                                                                aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <h6 class="align-items-center float-left"><i
-                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>2</h6>
-                                                    <h6 class="align-items-center float-right">1</h6>
-                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
-                                                        <div class="progress-bar progress-c-theme" role="progressbar"
-                                                                style="width: 10%;" aria-valuenow="10" aria-valuemin="0"
-                                                                aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <h6 class="align-items-center float-left"><i
-                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>1</h6>
-                                                    <h6 class="align-items-center float-right">0</h6>
-                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
-                                                        <div class="progress-bar" role="progressbar" style="width:0;"
-                                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- [ rating list ] end-->
-                                <div class="col-xl-8 col-md-12 m-b-30">
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                                aria-controls="home" aria-selected="false">Today</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active show" id="profile-tab" data-toggle="tab"
-                                                href="#profile" role="tab" aria-controls="profile" aria-selected="true">This
-                                                Week</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact"
-                                                role="tab" aria-controls="contact" aria-selected="false">All</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                <tr>
-                                                    <th>User</th>
-                                                    <th>Activity</th>
-                                                    <th>Time</th>
-                                                    <th>Status</th>
-                                                    <th class="text-right"></th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
-                                                                                alt="activity-user">Ida Jorgensen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">The quick brown fox</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">3:28 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-green">Done</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg"
-                                                                                alt="activity-user">Albert Andersen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">Jumps over the lazy</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">2:37 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-red">Missed</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-red f-10"></i>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-3.jpg"
-                                                                                alt="activity-user">Silje Larsen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">Dog the quick brown</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">10:23 AM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-purple">Delayed</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-purple f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
-                                                                                alt="activity-user">Ida Jorgensen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">The quick brown fox</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">4:28 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-green">Done</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <div class="tab-pane fade active show" id="profile" role="tabpanel"
-                                                aria-labelledby="profile-tab">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                <tr>
-                                                    <th>User</th>
-                                                    <th>Activity</th>
-                                                    <th>Time</th>
-                                                    <th>Status</th>
-                                                    <th class="text-right"></th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg"
-                                                                                alt="activity-user">Albert Andersen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">Jumps over the lazy</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">2:37 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-red">Missed</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-red f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
-                                                                                alt="activity-user">Ida Jorgensen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">The quick brown fox</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">3:28 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-green">Done</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
-                                                                                alt="activity-user">Ida Jorgensen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">The quick brown fox</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">4:28 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-green">Done</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-3.jpg"
-                                                                                alt="activity-user">Silje Larsen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">Dog the quick brown</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">10:23 AM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-purple">Delayed</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-purple f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <div class="tab-pane fade" id="contact" role="tabpanel"
-                                                aria-labelledby="contact-tab">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                <tr>
-                                                    <th>User</th>
-                                                    <th>Activity</th>
-                                                    <th>Time</th>
-                                                    <th>Status</th>
-                                                    <th class="text-right"></th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-3.jpg"
-                                                                                alt="activity-user">Silje Larsen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">Dog the quick brown</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">10:23 AM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-purple">Delayed</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-purple f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
-                                                                                alt="activity-user">Ida Jorgensen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">The quick brown fox</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">3:28 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-green">Done</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg"
-                                                                                alt="activity-user">Albert Andersen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">Jumps over the lazy</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">2:37 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-red">Missed</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-red f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h6 class="m-0"><img class="rounded-circle  m-r-10"
-                                                                                style="width:40px;"
-                                                                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
-                                                                                alt="activity-user">Ida Jorgensen</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">The quick brown fox</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0">4:28 PM</h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6 class="m-0 text-c-green">Done</h6>
-                                                    </td>
-                                                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- [ Main Content ] end -->
+              <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>ScoreBoard</h5>
+                        <span class="d-block m-t-5"><code>{{date.today()}}</code></span>
+                    </div>
+                    <div></div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <tbody>
+                                    {% for game in gameHeaderDF.itertuples() %}
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    class="rounded-circle m-r-10"
+                                                    style="width: 38px"
+                                                    src="static/NBA_LOGO/{{lineScoreDF.loc[lineScoreDF['GAME_ID'] ==
+                                                    game.GAME_ID]['TEAM_ID'].values[0]}}.png"
+                                                    alt="activity-user">
+                                            </td>
+                                    
+                                            <td> {{lineScoreDF.loc[lineScoreDF['GAME_ID'] ==
+                                                game.GAME_ID]['TEAM_ABBREVIATION'].values[0]}}
+                                            </td>
+                                            {%if game.LIVE_PERIOD == 0 %}
+                                                <td></td>
+                                            {%else%}
+                                            <td>
+                                                {{roundNum(lineScoreDF.loc[lineScoreDF['GAME_ID'] ==
+                                                game.GAME_ID]['PTS'].values[0], 0)}}
+                                            </td>
+                                            {%endif%}
+                                            <td>
+                                                VS
+                                            </td>
+                                            {%if game.LIVE_PERIOD == 0 %}
+                                                <td></td>
+                                            {%else%}
+                                            <td>
+                                                {{roundNum(lineScoreDF.loc[lineScoreDF['GAME_ID'] ==
+                                                game.GAME_ID]['PTS'].values[1], 0)}}
+                                            </td>
+                                            {%endif%}
+                                            <td>
+                                                {{lineScoreDF.loc[lineScoreDF['GAME_ID'] ==
+                                                game.GAME_ID]['TEAM_ABBREVIATION'].values[1]}} 
+                                            </td>
+                                            <td>
+                                                <img
+                                                    class="rounded-circle m-r-10"
+                                                    style="width: 38px"
+                                                    src="static/NBA_LOGO/{{lineScoreDF.loc[lineScoreDF['GAME_ID'] ==
+                                                    game.GAME_ID]['TEAM_ID'].values[1]}}.png"
+                                                    alt="activity-user">
+                                            </td>
+                                            <td>
+                                                {{game.GAME_STATUS_TEXT}}
+                                            </td>
+                                            <td>
+                                                {{game.LIVE_PC_TIME}}
+                                            </td>
+                                            {%if game.GAME_STATUS_TEXT == "Final" or  game.LIVE_PERIOD == 0 %}
+                                                <td></td>
+                                            {%else%}
+                                                <td>
+                                                    <i class="fas fa-basketball-ball text-c-blue f-10 Blink"></i>
+                                                </tr>                                              
+                                            {%endif%}    
+                                        </tr>  
+                                        {% endfor %}
+                                    <!-- <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+              <!--[ daily sales section ] start-->
+              <!-- <div class="col-md-6 col-xl-4">
+                <div class="card daily-sales">
+                  <div class="card-block">
+                    <h6 class="mb-4">Daily Sales</h6>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item"><span class="page-link" onclick="changePlayerPrev()">Previous</span></li>
+                            <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                            <li class="page-item active"><span class="page-link playerInfo" id="1630180">{{playerStatsAll["1610612737"]["1630180"]["FULL_NAME"]}}<span class="sr-only">(current)</span></span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#!">
+                              <img
+                                id=""
+                                class="rounded-circle playerStatsAvatar"
+                                style="width: 60px"
+                                src="{{url}}1627749.png"
+                                alt="activity-user"
+                              />
+                            </a></li>
+                            <li class="page-item"><a class="page-link" href="#!" onclick="">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div class="row d-flex align-items-center">
+                      <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0">
+                          <i
+                            class="feather icon-arrow-up text-c-green f-30 m-r-10"
+                          ></i
+                          >$ 249.95
+                        </h3>
+                      </div>
 
+                      <div class="col-3 text-right">
+                        <p class="m-b-0">67%</p>
+                      </div>
+                    </div>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="23"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!--[ daily sales section ] end-->
+              <!--[ Monthly  sales section ] starts-->
+              <div class="col-md-6 col-xl-4">
+                <div class="card Monthly-sales">
+                  <div class="card-block">
+                    <h6 class="mb-4">Player 1</h6>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item"><span class="page-link" onclick="changeTeamImagePrev()">Previous</span></li>
+                            <li class="page-item active"><span class="page-link">
+                              <img
+                                id={{teamIDs[0]}}
+                                class="rounded-circle m-r-10 imgClickAndChange"
+                                style="width: 50px"
+                                src="static/NBA_LOGO/{{teamIDs[0]}}.png"
+                                alt="activity-user"
+                              /><span class="sr-only">(current)</span></span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#!" onclick="changeTeamImageNext()">Next</a></li>
+                        </ul>
+                        <ul class="pagination">
+                            <li class="page-item"><span class="page-link" onclick="changePlayerPrev()">Previous</span></li>
+
+                            <li class="page-item active"><span class="page-link playerInfo" id="1630180">{{playerStatsAll["1610612737"]["1630180"]["FULL_NAME"]}}<span class="sr-only">(current)</span></span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#!">
+                              <img
+                                id=""
+                                class="rounded-circle playerStatsAvatar"
+                                style="width: 60px"
+                                src="{{url}}1630180.png"
+                                alt="activity-user"
+                              />
+                            </a></li>
+                            <li class="page-item"><a class="page-link" href="#!" onclick="changePlayerNext()">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div class="row d-flex align-items-center">
+                      <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0">
+                          <i
+                            class="feather icon-arrow-down text-c-red f-30 m-r-10"
+                          ></i
+                          >
+                        </h3>
+                      </div>
+                      <div class="col-3 text-right">
+                        <p class="m-b-0"></p>
+                      </div>
+                    </div>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2"
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[ Monthly  sales section ] end-->
+              <!--[ year  sales section ] starts-->
+              <div class="col-md-12 col-xl-4">
+                <div class="card yearly-sales">
+                  <div class="card-block">
+                    <h6 class="mb-4">Yearly Sales</h6>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><span class="page-link">Previous</span></li>
+                            <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                            <li class="page-item active"><span class="page-link">2<span class="sr-only">(current)</span></span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div class="row d-flex align-items-center">
+                      <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0">
+                          <i
+                            class="feather icon-arrow-up text-c-green f-30 m-r-10"
+                          ></i
+                          >$ 8.638.32
+                        </h3>
+                      </div>
+                      <div class="col-3 text-right">
+                        <p class="m-b-0">80%</p>
+                      </div>
+                    </div>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme"
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[ year  sales section ] end-->
+              <!--Stats Leader  PPG start-->
+              <div class="col-xl-8 col-md-6">
+                <div class="card Recent-Users">
+                  <div class="card-header">
+                    <h5>Stats Leader PPG</h5>
+                  </div>
+                  <div class="card-block px-0 py-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <tbody>
+                          <!-- <tr class="unread"> -->
+                          {% for AvgPtsTopTenLeader in AvgPtsTopTenLeaders %}
+                          <tr class="unread">
+                            <td>
+                              <img
+                                class="rounded-circle"
+                                style="width: 60px"
+                                src="{{url}}{{AvgPtsTopTenLeader[0]}}.png"
+                                alt="activity-user"
+                              />
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgPtsTopTenLeader[2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgPtsTopTenLeader[-2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="text-muted">
+                                <i
+                                  class="fas fa-circle text-c-green f-10 m-r-15"
+                                ></i
+                                ><img
+                                  class="rounded-circle"
+                                  style="width: 50px"
+                                  src="static/NBA_LOGO/{{AvgPtsTopTenLeader[3]}}.png"
+                                  alt="activity-user"
+                                />
+                              </h6>
+                            </td>
+                            <td>
+                              <a
+                                href="#!"
+                                class="label theme-bg2 text-white f-12"
+                                >Reject</a
+                              ><a
+                                href="#!"
+                                class="label theme-bg text-white f-12"
+                                >Approve</a
+                              >
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Stats Leader PPG end-->
+
+              <!--Stats Leader RPG start-->
+              <div class="col-xl-8 col-md-6">
+                <div class="card Recent-Users">
+                  <div class="card-header">
+                    <h5>Stats Leader RPG</h5>
+                  </div>
+                  <div class="card-block px-0 py-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <tbody>
+                          {% for AvgRebTopTenLeader in AvgRebTopTenLeaders %}
+                          <tr class="unread">
+                            <td>
+                              <img
+                                class="rounded-circle"
+                                style="width: 60px"
+                                src="{{url}}{{AvgRebTopTenLeader[0]}}.png"
+                                alt="activity-user"
+                              />
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgRebTopTenLeader[2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgRebTopTenLeader[-7]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="text-muted">
+                                <i
+                                  class="fas fa-circle text-c-green f-10 m-r-15"
+                                ></i
+                                ><img
+                                  class="rounded-circle"
+                                  style="width: 50px"
+                                  src="static/NBA_LOGO/{{AvgRebTopTenLeader[3]}}.png"
+                                  alt="activity-user"
+                                />
+                              </h6>
+                            </td>
+                            <td>
+                              <a
+                                href="#!"
+                                class="label theme-bg2 text-white f-12"
+                                >Reject</a
+                              ><a
+                                href="#!"
+                                class="label theme-bg text-white f-12"
+                                >Approve</a
+                              >
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Stats Leaders RPG end-->
+
+              <!--Stats Leader APG start-->
+              <div class="col-xl-8 col-md-6">
+                <div class="card Recent-Users">
+                  <div class="card-header">
+                    <h5>Stats Leader APG</h5>
+                  </div>
+                  <div class="card-block px-0 py-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <tbody>
+                          {% for AvgAstTopTenLeader in AvgAstTopTenLeaders %}
+                          <tr class="unread">
+                            <td>
+                              <img
+                                class="rounded-circle"
+                                style="width: 60px"
+                                src="{{url}}{{AvgAstTopTenLeader[0]}}.png"
+                                alt="activity-user"
+                              />
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgAstTopTenLeader[2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgAstTopTenLeader[-6]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="text-muted">
+                                <i
+                                  class="fas fa-circle text-c-green f-10 m-r-15"
+                                ></i
+                                ><img
+                                  class="rounded-circle"
+                                  style="width: 50px"
+                                  src="static/NBA_LOGO/{{AvgAstTopTenLeader[3]}}.png"
+                                  alt="activity-user"
+                                />
+                              </h6>
+                            </td>
+                            <td>
+                              <a
+                                href="#!"
+                                class="label theme-bg2 text-white f-12"
+                                >Reject</a
+                              ><a
+                                href="#!"
+                                class="label theme-bg text-white f-12"
+                                >Approve</a
+                              >
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[ Stats Leaders APG ] end-->
+
+              <!--Stats Leader STPG start-->
+              <div class="col-xl-8 col-md-6">
+                <div class="card Recent-Users">
+                  <div class="card-header">
+                    <h5>Stats Leader STPG</h5>
+                  </div>
+                  <div class="card-block px-0 py-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <tbody>
+                          {% for AvgStlTopTenLeader in AvgStlTopTenLeaders %}
+                          <tr class="unread">
+                            <td>
+                              <img
+                                class="rounded-circle"
+                                style="width: 60px"
+                                src="{{url}}{{AvgStlTopTenLeader[0]}}.png"
+                                alt="activity-user"
+                              />
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgStlTopTenLeader[2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgStlTopTenLeader[-5]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="text-muted">
+                                <i
+                                  class="fas fa-circle text-c-green f-10 m-r-15"
+                                ></i
+                                ><img
+                                  class="rounded-circle"
+                                  style="width: 50px"
+                                  src="static/NBA_LOGO/{{AvgStlTopTenLeader[3]}}.png"
+                                  alt="activity-user"
+                                />
+                              </h6>
+                            </td>
+                            <td>
+                              <a
+                                href="#!"
+                                class="label theme-bg2 text-white f-12"
+                                >Reject</a
+                              ><a
+                                href="#!"
+                                class="label theme-bg text-white f-12"
+                                >Approve</a
+                              >
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[ Stats Leaders STPG ] end-->
+
+              <!--Stats Leader BLKPG start-->
+              <div class="col-xl-8 col-md-6">
+                <div class="card Recent-Users">
+                  <div class="card-header">
+                    <h5>Stats Leader BLKPG</h5>
+                  </div>
+                  <div class="card-block px-0 py-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <tbody>
+                          {% for AvgBlkTopTenLeader in AvgBlkTopTenLeaders %}
+                          <tr class="unread">
+                            <td>
+                              <img
+                                class="rounded-circle"
+                                style="width: 60px"
+                                src="{{url}}{{AvgBlkTopTenLeader[0]}}.png"
+                                alt="activity-user"
+                              />
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgBlkTopTenLeader[2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{AvgBlkTopTenLeader[-4]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="text-muted">
+                                <i
+                                  class="fas fa-circle text-c-green f-10 m-r-15"
+                                ></i
+                                ><img
+                                  class="rounded-circle"
+                                  style="width: 50px"
+                                  src="static/NBA_LOGO/{{AvgBlkTopTenLeader[3]}}.png"
+                                  alt="activity-user"
+                                />
+                              </h6>
+                            </td>
+                            <td>
+                              <a
+                                href="#!"
+                                class="label theme-bg2 text-white f-12"
+                                >Reject</a
+                              ><a
+                                href="#!"
+                                class="label theme-bg text-white f-12"
+                                >Approve</a
+                              >
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[ Stats Leaders BLKPG ] end-->
+
+              <!--Stats Leader FG3_PCT start-->
+              <div class="col-xl-8 col-md-6">
+                <div class="card Recent-Users">
+                  <div class="card-header">
+                    <h5>Stats Leader 3P%</h5>
+                  </div>
+                  <div class="card-block px-0 py-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <tbody>
+                          {% for FG3_PctTopTenLeader in FG3_PctTopTenLeaders %}
+                          <tr class="unread">
+                            <td>
+                              <img
+                                class="rounded-circle"
+                                style="width: 60px"
+                                src="{{url}}{{FG3_PctTopTenLeader[0]}}.png"
+                                alt="activity-user"
+                              />
+                            </td>
+                            <td>
+                              <h6 class="mb-1">{{FG3_PctTopTenLeader[2]}}</h6>
+                            </td>
+                            <td>
+                              <h6 class="mb-1">
+                                {{roundNum(FG3_PctTopTenLeader[12]*100)}}%
+                              </h6>
+                            </td>
+                            <td>
+                              <h6 class="text-muted">
+                                <i
+                                  class="fas fa-circle text-c-green f-10 m-r-15"
+                                ></i
+                                ><img
+                                  class="rounded-circle"
+                                  style="width: 50px"
+                                  src="static/NBA_LOGO/{{FG3_PctTopTenLeader[3]}}.png"
+                                  alt="activity-user"
+                                />
+                              </h6>
+                            </td>
+                            <td>
+                              <a
+                                href="#!"
+                                class="label theme-bg2 text-white f-12"
+                                >Reject</a
+                              ><a
+                                href="#!"
+                                class="label theme-bg text-white f-12"
+                                >Approve</a
+                              >
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[ Stats Leaders FG3_PCT ] end-->
+
+              <!-- [ statistics year chart ] start -->
+              <div class="col-xl-4 col-md-6">
+                <div class="card card-event">
+                  <div class="card-block">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col">
+                        <h5 class="m-0">Upcoming Event</h5>
+                      </div>
+                      <div class="col-auto">
+                        <label
+                          class="label theme-bg2 text-white f-14 f-w-400 float-right"
+                          >34%</label
+                        >
+                      </div>
+                    </div>
+                    <h2 class="mt-3 f-w-300">
+                      45<sub class="text-muted f-14">Competitors</sub>
+                    </h2>
+                    <h6 class="text-muted mt-4 mb-0">
+                      You can participate in event
+                    </h6>
+                    <i class="fab fa-angellist text-c-purple f-50"></i>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-block border-bottom">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-auto">
+                        <i class="feather icon-zap f-30 text-c-green"></i>
+                      </div>
+                      <div class="col">
+                        <h3 class="f-w-300">235</h3>
+                        <span class="d-block text-uppercase">TOTAL IDEAS</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-auto">
+                        <i class="feather icon-map-pin f-30 text-c-blue"></i>
+                      </div>
+                      <div class="col">
+                        <h3 class="f-w-300">26</h3>
+                        <span class="d-block text-uppercase"
+                          >TOTAL LOCATIONS</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ statistics year chart ] end -->
+              <!--[social-media section] start-->
+              <div class="col-md-12 col-xl-4">
+                <div class="card card-social">
+                  <div class="card-block border-bottom">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-auto">
+                        <i class="fab fa-facebook-f text-primary f-36"></i>
+                      </div>
+                      <div class="col text-right">
+                        <h3>12,281</h3>
+                        <h5 class="text-c-green mb-0">
+                          +7.2% <span class="text-muted">Total Likes</span>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div
+                      class="row align-items-center justify-content-center card-active"
+                    >
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10">
+                          <span class="text-muted m-r-5">Target:</span>35,098
+                        </h6>
+                        <div class="progress">
+                          <div
+                            class="progress-bar progress-c-theme"
+                            role="progressbar"
+                            style="width: 60%; height: 6px"
+                            aria-valuenow="60"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10">
+                          <span class="text-muted m-r-5">Duration:</span>3,539
+                        </h6>
+                        <div class="progress">
+                          <div
+                            class="progress-bar progress-c-theme2"
+                            role="progressbar"
+                            style="width: 45%; height: 6px"
+                            aria-valuenow="45"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="card card-social">
+                  <div class="card-block border-bottom">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-auto">
+                        <i class="fab fa-twitter text-c-blue f-36"></i>
+                      </div>
+                      <div class="col text-right">
+                        <h3>11,200</h3>
+                        <h5 class="text-c-purple mb-0">
+                          +6.2% <span class="text-muted">Total Likes</span>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div
+                      class="row align-items-center justify-content-center card-active"
+                    >
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10">
+                          <span class="text-muted m-r-5">Target:</span>34,185
+                        </h6>
+                        <div class="progress">
+                          <div
+                            class="progress-bar progress-c-green"
+                            role="progressbar"
+                            style="width: 40%; height: 6px"
+                            aria-valuenow="40"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10">
+                          <span class="text-muted m-r-5">Duration:</span>4,567
+                        </h6>
+                        <div class="progress">
+                          <div
+                            class="progress-bar progress-c-blue"
+                            role="progressbar"
+                            style="width: 70%; height: 6px"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="card card-social">
+                  <div class="card-block border-bottom">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-auto">
+                        <i class="fab fa-google-plus-g text-c-red f-36"></i>
+                      </div>
+                      <div class="col text-right">
+                        <h3>10,500</h3>
+                        <h5 class="text-c-blue mb-0">
+                          +5.9% <span class="text-muted">Total Likes</span>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div
+                      class="row align-items-center justify-content-center card-active"
+                    >
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10">
+                          <span class="text-muted m-r-5">Target:</span>25,998
+                        </h6>
+                        <div class="progress">
+                          <div
+                            class="progress-bar progress-c-theme"
+                            role="progressbar"
+                            style="width: 80%; height: 6px"
+                            aria-valuenow="80"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10">
+                          <span class="text-muted m-r-5">Duration:</span>7,753
+                        </h6>
+                        <div class="progress">
+                          <div
+                            class="progress-bar progress-c-theme2"
+                            role="progressbar"
+                            style="width: 50%; height: 6px"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--[social-media section] end-->
+              <!-- [ rating list ] starts-->
+              <!-- <div class="col-xl-4 col-md-6">
+                <div class="card user-list">
+                  <div class="card-header">
+                    <h5>Rating</h5>
+                  </div>
+                  <div class="card-block">
+                    <div
+                      class="row align-items-center justify-content-center m-b-20"
+                    >
+                      <div class="col-6">
+                        <h2
+                          class="f-w-300 d-flex align-items-center float-left m-0"
+                        >
+                          4.7
+                          <i class="fas fa-star f-10 m-l-10 text-c-yellow"></i>
+                        </h2>
+                      </div>
+                      <div class="col-6">
+                        <h6 class="d-flex align-items-center float-right m-0">
+                          0.4
+                          <i
+                            class="fas fa-caret-up text-c-green f-22 m-l-10"
+                          ></i>
+                        </h6>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <h6 class="align-items-center float-left">
+                          <i class="fas fa-star f-10 m-r-10 text-c-yellow"></i>5
+                        </h6>
+                        <h6 class="align-items-center float-right">384</h6>
+                        <div class="progress m-t-30 m-b-20" style="height: 6px">
+                          <div
+                            class="progress-bar progress-c-theme"
+                            role="progressbar"
+                            style="width: 70%"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <h6 class="align-items-center float-left">
+                          <i class="fas fa-star f-10 m-r-10 text-c-yellow"></i>4
+                        </h6>
+                        <h6 class="align-items-center float-right">145</h6>
+                        <div class="progress m-t-30 m-b-20" style="height: 6px">
+                          <div
+                            class="progress-bar progress-c-theme"
+                            role="progressbar"
+                            style="width: 35%"
+                            aria-valuenow="35"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <h6 class="align-items-center float-left">
+                          <i class="fas fa-star f-10 m-r-10 text-c-yellow"></i>3
+                        </h6>
+                        <h6 class="align-items-center float-right">24</h6>
+                        <div class="progress m-t-30 m-b-20" style="height: 6px">
+                          <div
+                            class="progress-bar progress-c-theme"
+                            role="progressbar"
+                            style="width: 25%"
+                            aria-valuenow="25"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <h6 class="align-items-center float-left">
+                          <i class="fas fa-star f-10 m-r-10 text-c-yellow"></i>2
+                        </h6>
+                        <h6 class="align-items-center float-right">1</h6>
+                        <div class="progress m-t-30 m-b-20" style="height: 6px">
+                          <div
+                            class="progress-bar progress-c-theme"
+                            role="progressbar"
+                            style="width: 10%"
+                            aria-valuenow="10"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <h6 class="align-items-center float-left">
+                          <i class="fas fa-star f-10 m-r-10 text-c-yellow"></i>1
+                        </h6>
+                        <h6 class="align-items-center float-right">0</h6>
+                        <div class="progress m-t-30 m-b-20" style="height: 6px">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 0"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- [ rating list ] end-->
+              <div class="col-xl-8 col-md-12 m-b-30">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="#home"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="false"
+                      >Eastern Conference</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active show"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="true"
+                      >Western Conference</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="contact-tab"
+                      data-toggle="tab"
+                      href="#contact"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >All</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Team</th>
+                          <th>W</th>
+                          <th>L</th>
+                          <th>Pct</th>
+                          <th>Home</th>
+                          <th>Road</th>
+                          <th>GB</th>
+                          <th>L10</th>
+                          <th>Strk</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for team in eastLeagueStandings %}
+                        <tr>
+                          <td>
+                            <h6 class="m-0">
+                              {{loop.index}}
+                              <img
+                                class="rounded-circle m-r-10"
+                                style="width: 50px"
+                                src="static/NBA_LOGO/{{team[2]}}.png"
+                                alt="activity-user"
+                              />{{team[3]}} {{team[4]}}
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[13]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[14]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{roundNum(team[15]*100)}}%</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[18]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[19]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">
+                              {{(eastLeagueStandings[0][13]-eastLeagueStandings[0][14]-(team[13]-team[14]))/2}}
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[20]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[36]}}</h6>
+                          </td>
+                          <!-- <td>
+                            <h6 class="m-0 text-c-green">Done</h6>
+                          </td> -->
+                          <td class="text-right">
+                            {% if loop.index <= 6 %}
+                            <i class="fas fa-circle text-c-green f-10"></i>
+                            {% elif loop.index <= 10 %}
+                            <i class="fas fa-circle text-c-yellow f-10"></i>
+                            {% else %}
+                            <i class="fas fa-circle text-c-red f-10"></i>
+                            {% endif %}
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                    <i class="fas fa-circle text-c-green f-10"></i> Playoff
+                    Clinched<br />
+                    <i class="fas fa-circle text-c-yellow f-10"></i> Play-in
+                    Tournament<br />
+                    <i class="fas fa-circle text-c-red f-10"></i>
+                    Eliminated<br />
+                  </div>
+
+                  <div
+                    class="tab-pane fade active show"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Team</th>
+                          <th>W</th>
+                          <th>L</th>
+                          <th>Pct</th>
+                          <th>Home</th>
+                          <th>Away</th>
+                          <th>GB</th>
+                          <th>L10</th>
+                          <th>Strk</th>
+                          <th class="text-right"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for team in westLeagueStandings %}
+                        <tr>
+                          <td>
+                            <h6 class="m-0">
+                              {{loop.index}}
+                              <img
+                                class="rounded-circle m-r-10"
+                                style="width: 50px"
+                                src="static/NBA_LOGO/{{team[2]}}.png"
+                                alt="activity-user"
+                              />{{team[3]}} {{team[4]}}
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[13]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[14]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{roundNum(team[15]*100)}}%</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[18]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[19]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">
+                              {{(westLeagueStandings[0][13]-westLeagueStandings[0][14]-(team[13]-team[14]))/2}}
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[20]}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">{{team[36]}}</h6>
+                          </td>
+                          <!-- <td>
+                            <h6 class="m-0 text-c-green">Done</h6>
+                          </td> -->
+                          <td class="text-right">
+                            {% if loop.index <= 6 %}
+                            <i class="fas fa-circle text-c-green f-10"></i>
+                            {% elif loop.index <= 10 %}
+                            <i class="fas fa-circle text-c-yellow f-10"></i>
+                            {% else %}
+                            <i class="fas fa-circle text-c-red f-10"></i>
+                            {% endif %}
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                    <i class="fas fa-circle text-c-green f-10"></i> Playoff
+                    Clinched<br />
+                    <i class="fas fa-circle text-c-yellow f-10"></i> Play-in
+                    Tournament<br />
+                    <i class="fas fa-circle text-c-red f-10"></i>
+                    Eliminated<br />
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>User</th>
+                          <th>Activity</th>
+                          <th>Time</th>
+                          <th>Status</th>
+                          <th class="text-right"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <h6 class="m-0">
+                              <img
+                                class="rounded-circle m-r-10"
+                                style="width: 40px"
+                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-3.jpg"
+                                alt="activity-user"
+                              />Silje Larsen
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">Dog the quick brown my ass</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0"></h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0 text-c-purple"></h6>
+                          </td>
+                          <td class="text-right">
+                            <i class="fas fa-circle text-c-purple f-10"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <h6 class="m-0">
+                              <img
+                                class="rounded-circle m-r-10"
+                                style="width: 40px"
+                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
+                                alt="activity-user"
+                              />Ida Jorgensen
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">The quick brown fox</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">3:28 PM</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0 text-c-green">Done</h6>
+                          </td>
+                          <td class="text-right">
+                            <i class="fas fa-circle text-c-green f-10"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <h6 class="m-0">
+                              <img
+                                class="rounded-circle m-r-10"
+                                style="width: 40px"
+                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg"
+                                alt="activity-user"
+                              />Albert Andersen
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">Jumps over the lazy</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">2:37 PM</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0 text-c-red">Missed</h6>
+                          </td>
+                          <td class="text-right">
+                            <i class="fas fa-circle text-c-red f-10"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <h6 class="m-0">
+                              <img
+                                class="rounded-circle m-r-10"
+                                style="width: 40px"
+                                src="{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg"
+                                alt="activity-user"
+                              />Ida Jorgensen
+                            </h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">The quick brown fox</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0">4:28 PM</h6>
+                          </td>
+                          <td>
+                            <h6 class="m-0 text-c-green">Done</h6>
+                          </td>
+                          <td class="text-right">
+                            <i class="fas fa-circle text-c-green f-10"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
         </div>
+      </div>
     </div>
-    <!-- [ Main Content ] end -->            
+  </div>
+</div>
+<!-- [ Main Content ] end -->
 
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+    //restructure player stats that come from render_template() in routes.py
+    let playerStatsAll = decodeHtml("{{playerStatsAll}}")
+    playerStatsAll = playerStatsAll.substring(1, playerStatsAll.length)
+    playerStatsAllArray = playerStatsAll.split("}}}}, ")
+    teamRosters = []
+    currentTeamID = (document.getElementsByClassName("imgClickAndChange")[0].id)
+    let currentTeamRoster = {}, currentPlayerID = 0
+    let teamIndex = 0
+    for(let index = 0; index < playerStatsAllArray.length; index++){
+      let teamRosterString = ""
+      if(index != playerStatsAllArray.length - 1){
+          teamRosterString = "{" + playerStatsAllArray[index] + "}}}}}"
+      }else{
+          teamRosterString = "{" + playerStatsAllArray[index]
+      }
+      teamRosterString = teamRosterString.replaceAll("Devonte'", "Devonte")
+      teamRosterString = teamRosterString.replaceAll("'", "\"")
+      teamRosterString = teamRosterString.replaceAll(/(?<=[a-zA-Z])"(?=[a-zA-Z])/g, "'")
+      let teamRosterObject = JSON.parse(teamRosterString)
+      if(Object.keys(teamRosterObject)[0] == currentTeamID){
+        currentTeamRoster = teamRosterObject
+        currentPlayerID = 0
+      }
+      teamRosters.push(teamRosterObject)
+    }
+    //an array
+    let currentTeamRosterPlayerIDs = Object.keys(currentTeamRoster[currentTeamID])
+    let playerIndex = 0
+    // console.log(typeof(teamRosters[28]))
+    // console.log(typeof(Object.keys(teamRosters[28])[0]))
+    // console.log(teamRosters.length)
+
+    function changeTeamImageNext() {  
+      //get the current team ID and append 1 to the next team
+      let currentTeamID = parseInt(document.getElementsByClassName("imgClickAndChange")[0].id)
+      let nextTeamID = 0;
+      if(currentTeamID >= 1610612766){
+        nextTeamID = 1610612737
+      }else{
+        nextTeamID = currentTeamID + 1
+      }
+      
+      let nextTeamIDstr = nextTeamID.toString()
+      //loop through all teams' rosters and find a match with the current team ID
+      for(let index in teamRosters){
+        teamRoster = teamRosters[index]
+        if(nextTeamIDstr == Object.keys(teamRoster)[0]){
+          currentTeamRoster = teamRoster
+          // console.log(currentTeamRoster)
+        }
+      }
+      //change it to the current team LOGO
+      document.getElementsByClassName("imgClickAndChange")[0].src = "static/NBA_LOGO/" + nextTeamIDstr + ".png"
+      //change it to the current team ID
+      document.getElementsByClassName("imgClickAndChange")[0].id = nextTeamIDstr
+      let nextPlayerID = (Object.keys(currentTeamRoster[nextTeamID])[0])
+      // console.log(nextPlayerID)
+      //after changing team, it will show the first player of the next team by default(name)
+      document.getElementsByClassName("playerInfo")[0].textContent = currentTeamRoster[nextTeamID][Object.keys(currentTeamRoster[nextTeamID])[0]]["FULL_NAME"]
+      //after changing team, it will show the first player of the next team by default(ID)
+      document.getElementsByClassName("playerInfo")[0].id = nextPlayerID
+      //after changing team, it will show the first player of the next team by default(Avatar)
+      document.getElementsByClassName("playerStatsAvatar")[0].src = "{{url}}" + nextPlayerID + ".png"
+
+      currentTeamRosterPlayerIDs = Object.keys(currentTeamRoster[nextTeamID])
+    }
+    
+    function changeTeamImagePrev() {  
+      let currentTeamID = parseInt(document.getElementsByClassName("imgClickAndChange")[0].id)
+      let prevTeamID = 0;
+      if(currentTeamID <= 1610612737){
+        prevTeamID = 1610612766
+      }else{
+        prevTeamID = currentTeamID - 1
+      }
+      
+      let prevTeamIDstr = prevTeamID.toString()
+      //loop through all teams' rosters and find a match with the current team ID
+      for(let index in teamRosters){
+        teamRoster = teamRosters[index]
+        if(prevTeamIDstr == Object.keys(teamRoster)[0]){
+          currentTeamRoster = teamRoster
+          // console.log(currentTeamRoster)
+        }
+      }
+      document.getElementsByClassName("imgClickAndChange")[0].id = prevTeamIDstr
+      document.getElementsByClassName("imgClickAndChange")[0].src = "static/NBA_LOGO/" + prevTeamIDstr + ".png"
+      let prevPlayerID = (Object.keys(currentTeamRoster[prevTeamID])[0])
+      // console.log(prevPlayerID)
+      document.getElementsByClassName("playerInfo")[0].textContent = currentTeamRoster[prevTeamID][Object.keys(currentTeamRoster[prevTeamID])[0]]["FULL_NAME"]
+      document.getElementsByClassName("playerInfo")[0].id = prevPlayerID
+      document.getElementsByClassName("playerStatsAvatar")[0].src = "{{url}}" + prevPlayerID + ".png"
+
+      currentTeamRosterPlayerIDs = Object.keys(currentTeamRoster[prevTeamID])
+    }
+
+    //decoding "&#34" which is the double quotation mark encoded inside from a Python dict into html
+    function decodeHtml(html) {
+      let txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
+    }
+
+    function changePlayerPrev(){
+      let currentTeamID = (document.getElementsByClassName("imgClickAndChange")[0].id)
+      let currentPlayerID = document.getElementsByClassName("playerInfo")[0].id
+      console.log(currentPlayerID)
+      console.log(currentTeamRosterPlayerIDs)
+      console.log(currentTeamRoster)
+      // if(playerIndex == 0){
+      //   playerIndex = currentTeamRosterPlayerIDs.length - 1
+      // }else{
+      //   playerIndex--
+      // }
+      currentPlayerID = currentTeamRosterPlayerIDs[playerIndex = playerIndex % currentTeamRosterPlayerIDs.length == 0 ? (currentTeamRosterPlayerIDs.length - 1)%currentTeamRosterPlayerIDs.length : --playerIndex % currentTeamRosterPlayerIDs.length]
+      currentPlayerID = currentTeamRosterPlayerIDs[playerIndex]
+      document.getElementsByClassName("playerInfo")[0].id = currentPlayerID
+      document.getElementsByClassName("playerInfo")[0].textContent = currentTeamRoster[currentTeamID][currentPlayerID.toString()]["FULL_NAME"]
+      document.getElementsByClassName("playerStatsAvatar")[0].src = "{{url}}" + currentPlayerID + ".png"
+      console.log(currentTeamRoster[currentTeamID])
+      console.log(currentPlayerID)
+    }
+
+
+    function changePlayerNext(){
+      let currentTeamID = (document.getElementsByClassName("imgClickAndChange")[0].id)
+      let currentPlayerID = document.getElementsByClassName("playerInfo")[0].id
+      console.log(currentPlayerID)
+      console.log(currentTeamRosterPlayerIDs)
+      console.log(currentTeamRoster)
+      currentPlayerID = currentTeamRosterPlayerIDs[(++playerIndex)%currentTeamRosterPlayerIDs.length]
+      
+      document.getElementsByClassName("playerInfo")[0].id = currentPlayerID
+      document.getElementsByClassName("playerInfo")[0].textContent = currentTeamRoster[currentTeamID][currentPlayerID.toString()]["FULL_NAME"]
+      document.getElementsByClassName("playerStatsAvatar")[0].src = "{{url}}" + currentPlayerID + ".png"
+      console.log(currentTeamRoster[currentTeamID])
+      console.log(currentPlayerID)
+    }
+</script>
+{% endblock javascripts %}
