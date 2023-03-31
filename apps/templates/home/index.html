@@ -162,6 +162,7 @@
                 </div>
               </div> -->
               <!--[ daily sales section ] end-->
+
               <!--[ Monthly  sales section ] starts-->
               <div class="col-md-6 col-xl-4">
                 <div class="card Monthly-sales">
@@ -170,33 +171,31 @@
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="page-item"><span class="page-link" onclick="changeTeamImagePrev()">Previous</span></li>
-                            <li class="page-item active"><span class="page-link">
-                              <img
+                            <li class="page-item active"><a class="page-link team-name" href="#!">Atlanta Hawks
+                            </a></li>
+                            <li class="page-item"><a class="page-link" href="#!" onclick="changeTeamImageNext()">Next</a></li>
+                        </ul>
+                        <img
                                 id={{teamIDs[0]}}
                                 class="rounded-circle m-r-10 imgClickAndChange"
                                 style="width: 50px"
                                 src="static/NBA_LOGO/{{teamIDs[0]}}.png"
                                 alt="activity-user"
                               /><span class="sr-only">(current)</span></span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#!" onclick="changeTeamImageNext()">Next</a></li>
-                        </ul>
                         <ul class="pagination">
                             <li class="page-item"><span class="page-link" onclick="changePlayerPrev()">Previous</span></li>
 
                             <li class="page-item active"><span class="page-link playerInfo" id="1630180">{{playerStatsAll["1610612737"]["1630180"]["FULL_NAME"]}}<span class="sr-only">(current)</span></span>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#!">
-                              <img
-                                id=""
-                                class="rounded-circle playerStatsAvatar"
-                                style="width: 60px"
-                                src="{{url}}1630180.png"
-                                alt="activity-user"
-                              />
-                            </a></li>
                             <li class="page-item"><a class="page-link" href="#!" onclick="changePlayerNext()">Next</a></li>
                         </ul>
+                        <img
+                            id=""
+                            class="rounded-circle playerStatsAvatar"
+                            style="width: 60px"
+                            src="{{url}}1630180.png"
+                            alt="activity-user"
+                              />
                     </nav>
                     <div class="row d-flex align-items-center">
                       <div class="col-9">
@@ -1298,6 +1297,11 @@
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
 <script>
+    let teamsIdNamePairs ={};
+    fetch('static/teamsIdNamePairs.json')
+    .then(response => response.json())
+    .then(json => {console.log(typeof(json)); teamsIdNamePairs = json; console.log(teamsIdNamePairs[1610612766])});
+    
     //restructure player stats that come from render_template() in routes.py
     let playerStatsAll = decodeHtml("{{playerStatsAll}}")
     playerStatsAll = playerStatsAll.substring(1, playerStatsAll.length)
@@ -1329,6 +1333,8 @@
     // console.log(typeof(teamRosters[28]))
     // console.log(typeof(Object.keys(teamRosters[28])[0]))
     // console.log(teamRosters.length)
+     let teams = document.getElementsByClassName("leagueStandings")[0].innerHTML
+    console.log(typeof('{{leagueStandings}}'))
 
     function changeTeamImageNext() {  
       //get the current team ID and append 1 to the next team
@@ -1354,6 +1360,8 @@
       //change it to the current team ID
       document.getElementsByClassName("imgClickAndChange")[0].id = nextTeamIDstr
       let nextPlayerID = (Object.keys(currentTeamRoster[nextTeamID])[0])
+      //change it to the current team
+      document.getElementsByClassName("team-name")[0].innerHTML = teamsIdNamePairs[nextTeamID]
       // console.log(nextPlayerID)
       //after changing team, it will show the first player of the next team by default(name)
       document.getElementsByClassName("playerInfo")[0].textContent = currentTeamRoster[nextTeamID][Object.keys(currentTeamRoster[nextTeamID])[0]]["FULL_NAME"]
@@ -1361,7 +1369,7 @@
       document.getElementsByClassName("playerInfo")[0].id = nextPlayerID
       //after changing team, it will show the first player of the next team by default(Avatar)
       document.getElementsByClassName("playerStatsAvatar")[0].src = "{{url}}" + nextPlayerID + ".png"
-
+      
       currentTeamRosterPlayerIDs = Object.keys(currentTeamRoster[nextTeamID])
     }
     
@@ -1384,6 +1392,8 @@
         }
       }
       document.getElementsByClassName("imgClickAndChange")[0].id = prevTeamIDstr
+      //change it to the current team
+      document.getElementsByClassName("team-name")[0].innerHTML = teamsIdNamePairs[prevTeamID]
       document.getElementsByClassName("imgClickAndChange")[0].src = "static/NBA_LOGO/" + prevTeamIDstr + ".png"
       let prevPlayerID = (Object.keys(currentTeamRoster[prevTeamID])[0])
       // console.log(prevPlayerID)
