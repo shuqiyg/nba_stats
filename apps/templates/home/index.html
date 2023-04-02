@@ -175,13 +175,16 @@
                             </a></li>
                             <li class="page-item"><a class="page-link" href="#!" onclick="changeTeamImageNext()">Next</a></li>
                         </ul>
-                        <img
+                        <div>
+                            <img
                                 id={{teamIDs[0]}}
-                                class="rounded-circle m-r-10 imgClickAndChange"
-                                style="width: 50px"
+                                class="m-r-10 imgClickAndChange"
+                                style="width: 100px; margin-left: 85px; margin-bottom: 15px;"
                                 src="static/NBA_LOGO/{{teamIDs[0]}}.png"
                                 alt="activity-user"
                               /><span class="sr-only">(current)</span></span>
+                        </div>
+                        
                         <ul class="pagination">
                             <li class="page-item"><span class="page-link" onclick="changePlayerPrev()">Previous</span></li>
 
@@ -189,13 +192,16 @@
                             </li>
                             <li class="page-item"><a class="page-link" href="#!" onclick="changePlayerNext()">Next</a></li>
                         </ul>
-                        <img
+                        <div>
+                            <img
                             id=""
-                            class="rounded-circle playerStatsAvatar"
-                            style="width: 60px"
+                            class=" playerStatsAvatar"
+                            style="width: 110px; margin-left: 85px;margin-bottom: 10px;"
                             src="{{url}}1630180.png"
                             alt="activity-user"
                               />
+                        </div>
+                        
                     </nav>
                     <div class="row d-flex align-items-center">
                       <div class="col-9">
@@ -212,14 +218,104 @@
                     </div>
                     <div class="progress m-t-30" style="height: 7px">
                       <div
-                        class="progress-bar progress-c-theme2"
+                        class="progress-bar progress-c-theme2 ptsBar" 
                         role="progressbar"
                         style="width: 100%"
                         aria-valuenow="55"
                         aria-valuemin="0"
                         aria-valuemax="200"
                       ></div>
-                    </div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 rebBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 astBar" 
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">80%</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 stlBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 blkBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 fgBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 fg3Bar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 ftBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS&nbsp&nbsp&nbsp&nbsp23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 plusMinusBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
+                    <div class="progress m-t-30" style="height: 7px">
+                      <div
+                        class="progress-bar progress-c-theme2 fantasyPtsBar" 
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="55"
+                        aria-valuemin="0"
+                        aria-valuemax="200"
+                      ></div>
+                    </div><p class="m-b-0">PTS      23.6</p>
                   </div>
                 </div>
               </div>
@@ -291,14 +387,11 @@
                               <h6 class="mb-1">{{AvgPtsTopTenLeader[2]}}</h6>
                             </td>
                             <td>
-                              <h6 class="mb-1">{{AvgPtsTopTenLeader[-2]}}</h6>
+                              <h6 class="mb-1"><b>{{AvgPtsTopTenLeader[-2]}}</b></h6>
                             </td>
                             <td>
                               <h6 class="text-muted">
-                                <i
-                                  class="fas fa-circle text-c-green f-10 m-r-15"
-                                ></i
-                                ><img
+                              <img
                                   class="rounded-circle"
                                   style="width: 50px"
                                   src="static/NBA_LOGO/{{AvgPtsTopTenLeader[3]}}.png"
@@ -306,7 +399,7 @@
                                 />
                               </h6>
                             </td>
-                            <td>
+                            <!-- <td>
                               <a
                                 href="#!"
                                 class="label theme-bg2 text-white f-12"
@@ -316,7 +409,7 @@
                                 class="label theme-bg text-white f-12"
                                 >Approve</a
                               >
-                            </td>
+                            </td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -355,10 +448,7 @@
                             </td>
                             <td>
                               <h6 class="text-muted">
-                                <i
-                                  class="fas fa-circle text-c-green f-10 m-r-15"
-                                ></i
-                                ><img
+                              <img
                                   class="rounded-circle"
                                   style="width: 50px"
                                   src="static/NBA_LOGO/{{AvgRebTopTenLeader[3]}}.png"
@@ -366,7 +456,7 @@
                                 />
                               </h6>
                             </td>
-                            <td>
+                            <!-- <td>
                               <a
                                 href="#!"
                                 class="label theme-bg2 text-white f-12"
@@ -376,7 +466,7 @@
                                 class="label theme-bg text-white f-12"
                                 >Approve</a
                               >
-                            </td>
+                            </td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -415,10 +505,7 @@
                             </td>
                             <td>
                               <h6 class="text-muted">
-                                <i
-                                  class="fas fa-circle text-c-green f-10 m-r-15"
-                                ></i
-                                ><img
+                                <img
                                   class="rounded-circle"
                                   style="width: 50px"
                                   src="static/NBA_LOGO/{{AvgAstTopTenLeader[3]}}.png"
@@ -426,7 +513,7 @@
                                 />
                               </h6>
                             </td>
-                            <td>
+                            <!-- <td>
                               <a
                                 href="#!"
                                 class="label theme-bg2 text-white f-12"
@@ -436,7 +523,7 @@
                                 class="label theme-bg text-white f-12"
                                 >Approve</a
                               >
-                            </td>
+                            </td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -475,10 +562,7 @@
                             </td>
                             <td>
                               <h6 class="text-muted">
-                                <i
-                                  class="fas fa-circle text-c-green f-10 m-r-15"
-                                ></i
-                                ><img
+                                <img
                                   class="rounded-circle"
                                   style="width: 50px"
                                   src="static/NBA_LOGO/{{AvgStlTopTenLeader[3]}}.png"
@@ -486,7 +570,7 @@
                                 />
                               </h6>
                             </td>
-                            <td>
+                            <!-- <td>
                               <a
                                 href="#!"
                                 class="label theme-bg2 text-white f-12"
@@ -496,7 +580,7 @@
                                 class="label theme-bg text-white f-12"
                                 >Approve</a
                               >
-                            </td>
+                            </td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -535,10 +619,7 @@
                             </td>
                             <td>
                               <h6 class="text-muted">
-                                <i
-                                  class="fas fa-circle text-c-green f-10 m-r-15"
-                                ></i
-                                ><img
+                                <img
                                   class="rounded-circle"
                                   style="width: 50px"
                                   src="static/NBA_LOGO/{{AvgBlkTopTenLeader[3]}}.png"
@@ -546,7 +627,7 @@
                                 />
                               </h6>
                             </td>
-                            <td>
+                            <!-- <td>
                               <a
                                 href="#!"
                                 class="label theme-bg2 text-white f-12"
@@ -556,7 +637,7 @@
                                 class="label theme-bg text-white f-12"
                                 >Approve</a
                               >
-                            </td>
+                            </td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -597,10 +678,7 @@
                             </td>
                             <td>
                               <h6 class="text-muted">
-                                <i
-                                  class="fas fa-circle text-c-green f-10 m-r-15"
-                                ></i
-                                ><img
+                                <img
                                   class="rounded-circle"
                                   style="width: 50px"
                                   src="static/NBA_LOGO/{{FG3_PctTopTenLeader[3]}}.png"
@@ -608,7 +686,7 @@
                                 />
                               </h6>
                             </td>
-                            <td>
+                            <!-- <td>
                               <a
                                 href="#!"
                                 class="label theme-bg2 text-white f-12"
@@ -618,7 +696,7 @@
                                 class="label theme-bg text-white f-12"
                                 >Approve</a
                               >
-                            </td>
+                            </td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -1333,8 +1411,21 @@
     // console.log(typeof(teamRosters[28]))
     // console.log(typeof(Object.keys(teamRosters[28])[0]))
     // console.log(teamRosters.length)
-     let teams = document.getElementsByClassName("leagueStandings")[0].innerHTML
-    console.log(typeof('{{leagueStandings}}'))
+    
+    //fetch stats data from json files
+    let currentTeamRosterStats;
+    let teamRosterStatsFileName = 'static/player_stats_all/' + currentTeamID.toString() + ".json"
+    fetch(teamRosterStatsFileName)
+    .then(response => response.json())
+    .then(response => response[currentTeamID.toString()][1630180])
+    .then(json => {currentTeamRosterStats = json; console.log(currentTeamRosterStats)})
+
+    console.log(currentTeamRosterStats)
+    
+    //pass stats to the progress bar
+    // let currentPlayerPts = typeof(currentTeamRosterStats)
+    // console.log(currentPlayerPts)
+    // document.getElementsByClassName("ptsBar")[0].style.width = currentTeamRosterStats["Stats"]["PTS"]["0"] + "%"
 
     function changeTeamImageNext() {  
       //get the current team ID and append 1 to the next team
