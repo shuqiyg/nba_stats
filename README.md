@@ -1,6 +1,6 @@
 NBA Stats -- A Hardcore Basketball Fan's Project 
 
-![FrontPage0](/media/chrome_RaO0hFtByo.gif)
+![FrontPage0](/media/chrome_RaO0hFtByo.gif){: width="60%"}
 Player stats are presented in progress bar, categorized by Teams
 
 
