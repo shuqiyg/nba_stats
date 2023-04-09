@@ -10,4 +10,4 @@ Player stats are presented in progress bar, categorized by Teams
 ![FrontPage2](/media/frontpage2.png) Leaders of different Stats Category
 
 
-![FrontPage3](/media/frontpage3.png) Updated Standings in East/West Conference 
+![FrontPage3|200](/media/frontpage3.png) Updated Standings in East/West Conference 
